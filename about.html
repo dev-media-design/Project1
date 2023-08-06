@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2b67426ebc.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/Favicon.png" type="image/x-icon">
+
+</head>
+<body>
+
+    <style>
+        .about__page{
+            margin-top: 100px;
+        }
+
+        /* .about__page img{
+            margin-left: -100px;
+            height: 600px;
+            
+        } */
+        .about__para{
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .sub-title{
+         margin-bottom: 25px;
+        }
+        .tab-contents{
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+        .tab-contents ul li span{
+            font-size: 1.1rem;
+        }
+        iframe{
+            height: 720px;
+            width: 380px;
+            padding-bottom: 50px ;
+
+        }
+        .about-col-2{
+            margin-right:70px;
+            font-size: 1.1rem;
+        }
+    </style>
+
+    <!-- || HEADER NAV -->
+    <div id="header_about">
+        <div class="div container">
+            <nav>
+                <a href="#"><img src="images/logo-transparent.png" class="logo"></a>
+
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <!-- <li><a href="#">About</a></li> -->
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Store </a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+           
+        </div>
+    </div>
+<!-- || MAIN - CONTENT - ABOUT PAGE -->
+    <div class="about__page">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <!-- <img src="images/user.png" alt=""> -->
+                    <video src="/Vid_assets/About_vid.mp4" width="380px" height="720px" autoplay loop controls></video>
+                </div>
+
+                <div class="about-col-2">
+                    <h1 class="sub-title about__h1">About Me</h1>
+                    <p class="about__para">As a web developer, I thrive on combining creativity with technical expertise to build websites that not only engage users but also deliver on functionality. My goal is to bring your ideas to life, translating your vision into a captivating online presence. ensuring that your website is built using the latest technologies.
+                        <br><br>
+                        Beyond my love for web development, I also have a keen interest in influencer marketing. I believe in the power of collaboration and creating strong relationships with influencers to amplify brands in the digital space. My understanding of both web development and influencer marketing allows me to develop websites that seamlessly integrate influencer strategies, elevating your online presence and reaching a wider audience.
+
+
+
+                    </p>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <!-- SKILLS  -->
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Developer</span>
+                            <br>Designing Responsive Websites</li>
+                            <br>
+                            <li><span>UI/UX</span>
+                            <br>Designing Web interfaces</li>
+                            <br>
+                            <li><span>Influencer Marketing</span>
+                            <br>Managing Esports Content Creators</li>
+                        </ul>
+                    </div>
+
+                     <!-- || WORK EXPERIENCE  -->
+                     <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Feb 2022 - March 2023</span>
+                            <br>Growth & Development at Tournafest Pvt Ltd</li>
+                            <br>
+
+                            <li><span>2020-2022</span>
+                            <br>Influencer Marketing Manager at Ks Media Network</li>
+                           
+                        </ul>
+                    </div>
+
+                    <!-- || EDUCATION -->
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022-2025 (CURRENTLY PURSUING)</span>
+                            <br>Bachelors's in Computer Application</li>
+                            <br>
+                            <li><span>2020-2021</span>
+                            <br>Humanities</li>
+                           
+                        </ul>
+                    </div>
+
+                    <script>
+                        var tablinks = document.getElementsByClassName("tab-links");
+                    var tabcontents = document.getElementsByClassName("tab-contents");
+                    
+                    function opentab(tabname){
+                        for(tablink of tablinks){
+                            tablink.classList.remove("active-link");
+                        }
+                        for(tabcontent of tabcontents){
+                            tabcontent.classList.remove("active-tab");
+                        }
+                        event.currentTarget.classList.add("active-link");
+                        document.getElementById(tabname).classList.add("active-tab");
+                    
+                    }
+                    
+                    </script>
+
+</body>
+</html>
